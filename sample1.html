@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Page</title>
+    <link rel="stylesheet" href="sample1.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-menu">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <img src="img/menu.png" alt="Menu" class="menu-icon">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button class="search-button">
+                <img src="img/search.png" alt="Search">
+            </button>
+        </div>
+        <div class="header-icons">
+            <img src="img/message.png" alt="Notifications" class="notification-icon">
+            <img src="img/profile.png" alt="Profile Photo" class="profile-photo">
+            <button class="profile-button">Profile</button>
+        </div>
+    </header>
+    <div class="container">
+        <aside>
+            <ul class="sidebar-menu">
+                <li>
+                    <img src="img/dashboard.png" alt="Dashboard">
+                    <span><a href="index2.html">Dashboard</a></span>
+                </li>
+                <li>
+                    <img src="img/maps.png" alt="Buses">
+                    <span><a href="index3.html">Map</a></span>
+                </li>
+                <li>
+                    <img src="img/report.png" alt="Report">
+                    <span><a href="index4.html">Report</a></span>
+                </li>
+                <li>
+                    <img src="img/institution.png" alt="Institution">
+                    <span><a href="index5.html">Institution</a></span>
+                </li>
+                <li>
+                    <img src="img/bus.png" alt="Profile">
+                    <span><a href="index6.html">Bus Routes</a></span>
+                </li>
+                <li>
+                    <img src="img/calendar.png" alt="Setting">
+                    <span><a href="index7.html">Attendance</a></span>
+                </li>
+                <li>
+                    <img src="img/logout.png" alt="Logout">
+                    <span><a href="index1.html">Logout</a></span>
+                </li>
+            </ul>
+        </aside>
+        <main>
+            <div class="graph-container">
+                <canvas id="studentBusesChart"></canvas>
+            </div>
+            <div class="graph-container">
+                <canvas id="fuelEfficiencyChart"></canvas>
+            </div>
+        </main>
+    </div>
+    <script>
+        // Create the first bar graph
+        const ctx1 = document.getElementById('studentBusesChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['r16', 'r18', 'r2', 'r23', 'r25', 'r29'],
+                datasets: [{
+                    label: 'Students vs Buses',
+                    data: [10, 20, 17, 19, 10, 25],
+                    backgroundColor: 'rgba(111, 168, 240, 0.5)', // Light blue with transparency
+                    borderColor: 'rgba(111, 168, 240, 1)', // Solid blue
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            color: '#fff' // Set legend label color to white
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return ` ${tooltipItem.label}: ${tooltipItem.raw}`;
+                            }
+                        },
+                        titleColor: '#fff', // Set tooltip title color to white
+                        bodyColor: '#fff' // Set tooltip body color to white
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.2)' // Light white grid lines
+                        },
+                        ticks: {
+                            color: '#fff' // White text color for x-axis labels
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.2)' // Light white grid lines
+                        },
+                        ticks: {
+                            color: '#fff' // White text color for y-axis labels
+                        }
+                    }
+                }
+            }
+        });
+
+        // Create the second bar graph
+        const ctx2 = document.getElementById('fuelEfficiencyChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['r16', 'r18', 'r2', 'r23', 'r25', 'r29', 'r3', 'r8'],
+                datasets: [{
+                    label: 'Average Fuel Efficiency vs Route',
+                    data: [4.2, 4.5, 4.9, 4.0, 4.2, 4.3, 4.4, 4.2],
+                    backgroundColor: 'rgba(111, 168, 240, 0.5)', // Light blue with transparency
+                    borderColor: 'rgba(111, 168, 240, 1)', // Solid blue
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            color: '#fff' // Set legend label color to white
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return ` ${tooltipItem.label}: ${tooltipItem.raw}`;
+                            }
+                        },
+                        titleColor: '#fff', // Set tooltip title color to white
+                        bodyColor: '#fff' // Set tooltip body color to white
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.2)' // Light white grid lines
+                        },
+                        ticks: {
+                            color: '#fff' // White text color for x-axis labels
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.2)' // Light white grid lines
+                        },
+                        ticks: {
+                            color: '#fff' // White text color for y-axis labels
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

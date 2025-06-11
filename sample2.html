@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institution Page</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <header>
+        <div class="logo-menu">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <img src="img/menu.png" alt="Menu" class="menu-icon">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button class="search-button">
+                <img src="img/search.png" alt="Search">
+            </button>
+        </div>
+        <div class="header-icons">
+            <img src="img/message.png" alt="Notifications" class="notification-icon">
+            <img src="img/profile.png" alt="Profile Photo" class="profile-photo">
+            <button class="profile-button">Profile</button>
+        </div>
+    </header>
+    
+    <div class="container">
+        <aside>
+            <ul class="sidebar-menu">
+                <li>
+                    <img src="img/dashboard.png" alt="Dashboard">
+                    <span><a href="index2.html">Dashboard</a></span>
+                </li>
+                <li>
+                    <img src="img/maps.png" alt="Buses">
+                    <span><a href="index3.html">Map</a></span>
+                </li>
+                <li>
+                    <img src="img/report.png" alt="Report">
+                    <span><a href="index4.html">Report</a></span>
+                </li>
+                <li>
+                    <img src="img/institution.png" alt="Institution">
+                    <span><a href="index5.html">Institution</a></span>
+                </li>
+                <li>
+                    <img src="img/bus.png" alt="Profile">
+                    <span><a href="index6.html">Bus Routes</a></span>
+                </li>
+                <li>
+                    <img src="img/calendar.png" alt="Setting">
+                    <span><a href="index7.html">Attendance</a></span>
+                </li>
+                <li>
+                    <img src="img/logout.png" alt="Logout">
+                    <span><a href="index1.html">Logout</a></span>
+                </li>
+            </ul>
+        </aside>
+
+        <main>
+            <section class="institution-info">
+                <h1>Welcome to Our Institution</h1>
+                <p>Our institution is committed to providing excellent education and fostering an environment where students can thrive. Here, we highlight some of our core values and offerings.</p>
+                <div class="info-boxes">
+                    <div class="info-box">
+                        <img src="img/academic.png" alt="Academic Excellence">
+                        <div class="info-content">
+                            <h3>Academic Excellence</h3>
+                            <p>We offer a range of programs designed to help students achieve their academic goals.</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img src="img/community.png" alt="Community Engagement">
+                        <div class="info-content">
+                            <h3>Community Engagement</h3>
+                            <p>We encourage students to participate in community service and extracurricular activities.</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <img src="img/support.png" alt="Student Support">
+                        <div class="info-content">
+                            <h3>Student Support</h3>
+                            <p>Our dedicated support team is available to assist students with their needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function showDashboard() {
+            document.getElementById('dashboard-content').style.display = 'block';
+            document.getElementById('map-container').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

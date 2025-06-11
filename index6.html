@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Routes</title>
+    <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+    <header>
+        <div class="logo-menu">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <img src="img/menu.png" alt="Menu" class="menu-icon">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button class="search-button">
+                <img src="img/search.png" alt="Search">
+            </button>
+        </div>
+        <div class="header-icons">
+            <img src="img/message.png" alt="Notifications" class="notification-icon">
+            <img src="img/profile.png" alt="Profile Photo" class="profile-photo">
+            <button class="profile-button">Bus routes</button>
+        </div>
+    </header>
+    <div class="container">
+        <aside>
+            <ul class="sidebar-menu">
+                <li>
+                    <img src="img/dashboard.png" alt="Dashboard">
+                    <span><a href="index2.html">Dashboard</a></span>
+                </li>
+                <li>
+                    <img src="img/maps.png" alt="Buses">
+                    <span><a href="index3.html">Map</a></span>
+                </li>
+                <li>
+                    <img src="img/report.png" alt="Report">
+                    <span><a href="index4.html">Report</a></span>
+                </li>
+                <li>
+                    <img src="img/institution.png" alt="Institution">
+                    <span><a href="index5.html">Institution</a></span>
+                </li>
+                <li>
+                    <img src="img/bus.png" alt="Profile">
+                    <span><a href="index6.html">Bus Routes</a></span>
+                </li>
+                <li>
+                    <img src="img/calendar.png" alt="Setting">
+                    <span><a href="index7.html">Attendance</a></span>
+                </li>
+                <li>
+                    <img src="img/logout.png" alt="Logout">
+                    <span><a href="index1.html">Logout</a></span>
+                </li>
+            </ul>
+        </aside>
+
+        <div id="iframe-container">
+            <iframe src="sample6.html" title="RIT Website"></iframe>
+        </div>
+    
+    </div>
+    <script>
+        function showDashboard() {
+            document.getElementById('dashboard-content').style.display = 'block';
+            document.getElementById('map-container').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

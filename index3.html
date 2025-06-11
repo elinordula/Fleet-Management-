@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="style3.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-menu">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <img src="img/menu.png" alt="Menu" class="menu-icon">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button class="search-button">
+                <img src="img/search.png" alt="Search">
+            </button>
+        </div>
+        <div class="header-icons">
+            <img src="img/message.png" alt="Notifications" class="notification-icon">
+            <img src="img/profile.png" alt="Profile Photo" class="profile-photo">
+            <button class="profile-button">Profile</button>
+        </div>
+    </header>
+    <div class="container">
+        <aside>
+            <ul class="sidebar-menu">
+                <li>
+                    <img src="img/dashboard.png" alt="Dashboard">
+                    <span><a href="index2.html">Dashboard</a></span>
+                </li>
+                <li>
+                    <img src="img/maps.png" alt="Buses">
+                    <span><a href="index3.html">Map</a></span>
+                </li>
+                <li>
+                    <img src="img/report.png" alt="Report">
+                    <span><a href="index4.html">Report</a></span>
+                </li>
+                <li>
+                    <img src="img/institution.png" alt="Institution">
+                    <span><a href="index5.html">Institution</a></span>
+                </li>
+                <li>
+                    <img src="img/bus.png" alt="Profile">
+                    <span><a href="index6.html">Bus Routes</a></span>
+                </li>
+                <li>
+                    <img src="img/calendar.png" alt="Setting">
+                    <span><a href="index7.html">Attendance</a></span>
+                </li>
+                <li>
+                    <img src="img/logout.png" alt="Logout">
+                    <span><a href="index1.html">Logout</a></span>
+                </li>
+            </ul>
+        </aside>
+        
+        <div id="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.9595319448626!2d80.04281321081781!3d13.038247913360223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528bae35449d29%3A0x37d13f08d672385b!2sRajalakshmi%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1723121451181!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </div>
+    <script>
+        // Handle sidebar clicks
+        document.getElementById('dashboard').addEventListener('click', function() {
+            document.getElementById('dashboard-content').style.display = 'block';
+            document.getElementById('map-container').style.display = 'none';
+        });
+
+        document.getElementById('buses').addEventListener('click', function() {
+            document.getElementById('dashboard-content').style.display = 'none';
+            document.getElementById('map-container').style.display = 'block';
+        });
+
+        // Initially show the dashboard content
+        document.getElementById('dashboard-content').style.display = 'block';
+        document.getElementById('map-container').style.display = 'none';
+    </script>
+</body>
+</html>

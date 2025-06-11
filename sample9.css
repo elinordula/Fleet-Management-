@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #00315f, #6fa8f0);
+    height: 100vh; /* Adjusted for better viewport usage */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    padding: 1rem; /* Reduced padding to minimize space */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute space between items */
+    gap: 1rem;
+}
+
+.info-boxes {
+    margin-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem; /* Adjusted gap */
+}
+
+.info-box {
+    background: #6fa8f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 1rem; /* Adjusted padding */
+    width: 250px; /* Adjusted width */
+    height: 250px; /* Adjusted height */
+    box-sizing: border-box;
+}
+
+.info-box img {
+    height: 50px; /* Adjusted image size */
+    margin-right: 1rem;
+}
+
+.info-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.info-content h3 {
+    margin: 0;
+    font-size: 1.5rem; /* Adjusted font size */
+    color: #fff;
+}
+
+.recent-activity {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 100%;
+    margin-top: 1rem; /* Adjusted margin-top */
+}
+
+.recent-activity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recent-activity-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #00315f;
+}
+
+.view-button {
+    background-color: #00315f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.view-button:hover {
+    background-color: #6fa8f0;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+}
+
+.activity-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.activity-table th,
+.activity-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.activity-table th {
+    background-color: #00315f;
+    color: #fff;
+}
+
+.activity-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.activity-table tr:hover {
+    background-color: #f1f1f1;
+}

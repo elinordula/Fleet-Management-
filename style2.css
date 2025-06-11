@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #00315f, #6fa8f0);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.logo-menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    margin-right: 1rem;
+}
+
+.menu-icon {
+    height: 30px;
+    cursor: pointer;
+}
+
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar input {
+    width: 45%;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+}
+
+.search-button {
+    position: absolute;
+    right: calc(25% + 2rem); /* Adjust this value according to the width of the search bar */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button img {
+    height: 15px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.notification-icon,
+.profile-photo {
+    height: 30px;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.profile-button {
+    background-color: #00315f;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.profile-button:hover {
+    background-color: #6fa8f0;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+}
+
+aside {
+    width: 190px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-menu li img {
+    height: 30px;
+    margin-right: 1rem;
+}
+
+.sidebar-menu li span {
+    color: #fff;
+    font-size: 1rem;
+}
+
+main {
+    flex-grow: 1;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; /* Align boxes to the right */
+    gap: 1rem;
+}
+
+.info-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.info-box {
+    background: #6fa8f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    width: 250px; /* Set width to 30cm */
+    height: 200px; /* Set height to 20cm */
+    box-sizing: border-box; /* Include padding and border in the box's total width and height */
+}
+
+.info-box img {
+    height: 55px;
+    margin-right: 1rem;
+}
+
+.info-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.info-content h3 {
+    margin: 0;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.recent-activity {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.recent-activity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recent-activity-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #00315f;
+}
+
+.view-button {
+    background-color: #00315f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.view-button:hover {
+    background-color: #6fa8f0;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+}
+
+.activity-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.activity-table th,
+.activity-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.activity-table th {
+    background-color: #00315f;
+    color: #fff;
+}
+
+.activity-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.activity-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.sidebar-menu li {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #fff; /* Ensure text color is white */
+}
+
+.sidebar-menu li a {
+    color: #fff; /* Ensure link color is white */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.sidebar-menu li a:hover {
+    color: #ccc; /* Optionally, change color on hover if desired */
+}
+
+.sidebar-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Background color on hover */
+}
+/* 
+#iframe-container {
+    width: 100%;
+    height: 100%; 
+}
+
+#iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+} */
+
+#map-container {
+    flex-grow: 1;
+    display: flex;
+}
+
+#iframe-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#iframe-container iframe {
+    width: 100%;
+    height: 100vh; /* Ensure iframe takes up full height of viewport */
+    border: none;
+}
+
